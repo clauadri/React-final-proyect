@@ -6,6 +6,8 @@ import Women from './pages/Women';
 import Accesorios from './pages/Accesorios';
 import AboutUs from './pages/AboutUs';
 import Navbar from './componentes/Navbar';
+import Register from './pages/Register';
+import Login from './pages/Login';
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,8 @@ function App() {
           <Route path='women' element = {<Women/>}> </Route> 
           <Route path='accesorios' element = {<Accesorios/>}> </Route> 
           <Route path='aboutus' element = {<AboutUs/>}> </Route>
+          <Route path='register' element = {<Register/>}> </Route>
+          <Route path='login' element = {<Login/>}> </Route>
         </Routes>
 
 
