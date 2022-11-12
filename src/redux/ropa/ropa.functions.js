@@ -7,7 +7,7 @@ export const getClothes = ()=>async(dispatch)=>{
 
         const result =await axios.get("https://back-proyecto-react.vercel.app/ropas")
         console.log(result);
-        dispatch({type: 'getClothes', payload: result})
+        dispatch({type: 'getClothes', payload: result.data})
 
     } catch (error) {
         dispatch({type:'errorClothes', payload:error.message})

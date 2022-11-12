@@ -2,5 +2,7 @@
   text-align: center;
 }
 h1{
-  margin:2px
+  margin:2px;
+  font-size: 44px;
+  padding: 20px;
 }

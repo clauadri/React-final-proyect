@@ -1,6 +1,7 @@
 import React from 'react'
 import {useForm} from "react-hook-form"
 import "./Register.scss"
+import {API} from '../services/api';
 const Register = ( ) => {
 
   const {
@@ -8,12 +9,13 @@ const Register = ( ) => {
     handleSubmit,
 
     formState: { errors, isValid },
-
-
   } = useForm();
 
-  const registerUser = (datos) =>{
-    console.log(datos);
+  const registerUser = async(datos) =>{
+    
+    const resultado = await API.post('users/register', datos)
+      
+    console.log(resultado);
   }
 
   return (
@@ -38,7 +40,7 @@ const Register = ( ) => {
         <input name='password' placeholder='Introduce tu contraseña' type="password"
          {...register("password",{
           required:"Introduce una contraseña válida" , 
-          pattern:{value: /^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#$%^&*_=+-]).{8,12}$/, message:"Introduce una contraseña válida" }  })} ></input>
+          pattern:{ message:"Introduce una contraseña válida" }  })} ></input>
       </label>
 
       <label>
@@ -50,7 +52,7 @@ const Register = ( ) => {
 
       {errors.password ?  <p>Error en la contraseña</p> : null}
       <label className='button' >
-        <button>Register</button>
+        <button disabled={!isValid}>Register</button>
       </label>
 
       </form>

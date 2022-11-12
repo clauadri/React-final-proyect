@@ -1,19 +1,21 @@
 import React from 'react'
 import {useForm} from "react-hook-form"
 import "./Login.scss"
+import {API} from '../services/api';
 const Login = ( ) => {
 
   const {
     register,
     handleSubmit,
-
     formState: { errors, isValid },
-
-
   } = useForm();
 
-  const enviar = (datos) =>{
+  const enviar =async (datos) =>{
+    
     console.log(datos);
+    const resultado = await API.post('/users/login', datos)
+    console.log(resultado);
+    
   }
 
   return (
@@ -31,7 +33,7 @@ const Login = ( ) => {
         <input name='password' placeholder='Introduce tu contraseña' type="password"
          {...register("password",{
           required:"Introduce una contraseña válida" , 
-          pattern:{value: /^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#$%^&*_=+-]).{8,12}$/, message:"Introduce una contraseña válida" }  })} ></input>
+          pattern:{ message:"Introduce una contraseña válida" }  })} ></input>
       </label>
       {errors.password ?  <p>Error en la contraseña</p> : null}
       <label className='button' >
