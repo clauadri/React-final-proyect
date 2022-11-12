@@ -8,7 +8,7 @@ const INITIAL_STATE = {
 const ropaReducer = (state = INITIAL_STATE, action)=>{
     switch (action.type) {
         case 'gettingClothes':
-            return{...state, loading:true};
+            return{...state, loading:true, error: false};
         case 'getClothes':
             return{...state, loading:false, ropas: action.payload, error: false}
         case 'errorClothes':

@@ -20,6 +20,7 @@ const Home = () => {
           alt="loading"
         />
       ) : !error ? (
+        
         ropas.map((ropa) => {
           return (
             

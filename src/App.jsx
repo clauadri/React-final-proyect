@@ -10,7 +10,8 @@ function App() {
   return (
     <div className="App">
       <div>
-      <h1>Wemoto</h1>
+      <img className='logo' src='https://wemotoclothing.com/media/image/dc/d9/12/wemoto_logo_400.png'></img>
+      
       <Navbar/>
         <Routes> 
           <Route path='' element = {<Home/>}> </Route> 
