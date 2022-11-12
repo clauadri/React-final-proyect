@@ -1,0 +1,45 @@
+
+.form{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 450px;
+
+    .usuario{
+        padding-right: 40px;
+    }
+   
+
+    input{
+        margin: 10px;
+       
+    }
+    
+    label{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .button{
+        button{
+            margin-top: 20px;
+            width: 270px;
+            border-radius: 15px;
+            border: 1px solid black;
+            ;
+        }
+        
+        display: flex;
+        justify-content: center;
+    }
+
+
+    form{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        
+    }
+
+}

@@ -10,7 +10,8 @@ function App() {
   return (
     <div className="App">
       <div>
-        <Navbar/>
+      <h1>wemoto</h1>
+      <Navbar/>
         <Routes> 
           <Route path='' element = {<Home/>}> </Route> 
           <Route path='accesorios' element = {<Accesorios/>}> </Route> 
@@ -18,6 +19,7 @@ function App() {
           <Route path='register' element = {<Register/>}> </Route>
           <Route path='login' element = {<Login/>}> </Route>
         </Routes>
+        
 
 
       </div>
