@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { getClothes } from "../redux/ropa/ropa.functions";
 import { useSelector } from "react-redux";
 import "./Home.scss";
+import Imagen from "../componentes/Imagen";
 const Home = () => {
   const dispatch = useDispatch();
 
@@ -14,6 +15,7 @@ const Home = () => {
 
   return (
     <div className="container">
+    <Imagen imagen={'https://wemotoclothing.com/media/image/4e/f9/c6/IMG_9586u6DmmakbHgrM7.jpg'} text={'Moka Collection Capsule'}/>
       {loading ? (
         <img
           src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!bw700"
