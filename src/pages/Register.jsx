@@ -4,6 +4,8 @@ import "./Register.scss"
 import {API} from '../services/api';
 import Boton from '../componentes/Boton';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { nuevoUser } from '../redux/users/user.functions';
 const Register = ( ) => {
   
   const {
@@ -14,14 +16,11 @@ const Register = ( ) => {
   } = useForm();
 
   let navigateTo = useNavigate();
-
+  const dispatch= useDispatch();
   console.log(process.env.REACT_APP_BACK_URL);
   const registerUser = async(datos) =>{
-    
-    const resultado = await API.post('users/register', datos)
-      
-    console.log(resultado);
-    navigateTo('/login');
+      dispatch(nuevoUser(datos , navigateTo))
+       
   }
 
   return (

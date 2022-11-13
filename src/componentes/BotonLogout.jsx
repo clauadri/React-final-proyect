@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useDebugValue } from 'react'
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { logoutUser } from '../redux/users/user.functions';
 
 export const BotonLogout = () => {
     let navigateTo = useNavigate();
-    
+    const dispatch = useDispatch();
+
     const logOut = () =>{
-      console.log('funciona')
-      localStorage.removeItem('token')
-      navigateTo('/login')
+      dispatch(logoutUser(navigateTo))
+     
     }
   return (
     <div>

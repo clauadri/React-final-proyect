@@ -4,6 +4,8 @@ import "./Login.scss";
 import { API } from "../services/api";
 import Boton from "../componentes/Boton";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../redux/users/user.functions";
 const Login = () => {
   const {
     register,
@@ -12,12 +14,11 @@ const Login = () => {
   } = useForm();
 
   let navigateTo = useNavigate();
+  const dispatch = useDispatch();
 
   const enviar = async (datos) => {
-    // console.log(datos);
-    const resultado = await API.post("/users/login", datos);
-    localStorage.setItem('token',resultado.data.token)
-    navigateTo('/');
+    dispatch(loginUser(datos,navigateTo))
+    
   };
 
   return (
