@@ -5,7 +5,9 @@ import Boton from './Boton'
 import { BotonLogout } from './BotonLogout'
 import "./Navbar.scss"
 const Navbar = () => {
-  const token = useSelector(state => state.auth)
+  
+  const {token} = useSelector(state => state.users)
+  
   return (
     <nav className='nav' >
         <NavLink to="" activeclassname={'active'}>Home</NavLink>
@@ -17,7 +19,7 @@ const Navbar = () => {
         <NavLink to="login" activeclassname={'active'}>Login</NavLink>
         </>
         }
-        {<BotonLogout/>}
+        {token && <BotonLogout/>}
     </nav>
   )
 }

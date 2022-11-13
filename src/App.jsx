@@ -11,6 +11,7 @@ import Imagen from './componentes/Imagen';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { checkSession } from './redux/users/user.functions';
+import RutasSegurizadas from './componentes/RutasSegurizadas';
 function App() {
   const dispatch = useDispatch();
   const token = localStorage.getItem('token')
@@ -24,12 +25,11 @@ function App() {
       <img className='logo' src='https://wemotoclothing.com/media/image/dc/d9/12/wemoto_logo_400.png' alt=''></img>
       <Navbar/>
         <Routes> 
-          <Route path='accesorios' element = {<Accesorios/>}> </Route> 
-          <Route path='' element = {<Home/>}> </Route> 
-          
-          <Route path='aboutus' element = {<AboutUs/>}> </Route>
-          <Route path='register' element = {<Register/>}> </Route>
-          <Route path='login' element = {<Login/>}> </Route>
+          <Route path='accesorios' element = {<Accesorios/>}/> 
+          <Route path='' element = {<Home/>}/>  
+          <Route path='aboutus' element = {<AboutUs/>}/> 
+          <Route path='register' element ={<Register/>}/>
+          <Route path='login' element = {<Login/>}/> 
         </Routes>
       <Footer text='© 2022 Wemoto Cloting'/>
       </div>
