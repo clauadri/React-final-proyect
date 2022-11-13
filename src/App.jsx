@@ -24,8 +24,9 @@ function App() {
       <img className='logo' src='https://wemotoclothing.com/media/image/dc/d9/12/wemoto_logo_400.png' alt=''></img>
       <Navbar/>
         <Routes> 
-          <Route path='' element = {<Home/>}> </Route> 
           <Route path='accesorios' element = {<Accesorios/>}> </Route> 
+          <Route path='' element = {<Home/>}> </Route> 
+          
           <Route path='aboutus' element = {<AboutUs/>}> </Route>
           <Route path='register' element = {<Register/>}> </Route>
           <Route path='login' element = {<Login/>}> </Route>

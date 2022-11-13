@@ -28,7 +28,7 @@ const Register = ( ) => {
       <form onSubmit={ handleSubmit(registerUser) } >
 
       <label>
-      <p className='usuario' >Username</p> 
+      <p className='usuariop' >Username</p> 
 
         <input name="usuario" placeholder='Introduce tu email' type="text" {...register("userName",{required:true}  )} ></input>
       
