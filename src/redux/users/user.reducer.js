@@ -1,7 +1,8 @@
 const INITIAL_STATE = {
-    users:[],
+    user:[],
     loading:false,
     error:false,
+    token:null
 
 }
 

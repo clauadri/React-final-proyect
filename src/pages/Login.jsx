@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import "./Login.scss";
 import { API } from "../services/api";
 import Boton from "../componentes/Boton";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const {
     register,
@@ -10,10 +11,13 @@ const Login = () => {
     formState: { errors, isValid },
   } = useForm();
 
+  let navigateTo = useNavigate();
+
   const enviar = async (datos) => {
-    console.log(datos);
+    // console.log(datos);
     const resultado = await API.post("/users/login", datos);
-    console.log(resultado);
+    localStorage.setItem('token',resultado.data.token)
+    navigateTo('/');
   };
 
   return (

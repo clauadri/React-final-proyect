@@ -1,5 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Boton from './Boton'
+import { BotonLogout } from './BotonLogout'
 import "./Navbar.scss"
 const Navbar = () => {
   return (
@@ -9,6 +11,7 @@ const Navbar = () => {
         <NavLink to="aboutus" activeclassname={'active'}>About Us</NavLink>
         <NavLink to="register" activeclassname={'active'}>Register</NavLink>
         <NavLink to="login" activeclassname={'active'}>Login</NavLink>
+        <BotonLogout/>
     </nav>
   )
 }

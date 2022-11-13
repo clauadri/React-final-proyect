@@ -3,6 +3,7 @@ import {useForm} from "react-hook-form"
 import "./Register.scss"
 import {API} from '../services/api';
 import Boton from '../componentes/Boton';
+import { useNavigate } from 'react-router-dom';
 const Register = ( ) => {
   
   const {
@@ -11,12 +12,16 @@ const Register = ( ) => {
 
     formState: { errors, isValid },
   } = useForm();
+
+  let navigateTo = useNavigate();
+
   console.log(process.env.REACT_APP_BACK_URL);
   const registerUser = async(datos) =>{
     
     const resultado = await API.post('users/register', datos)
       
     console.log(resultado);
+    navigateTo('/login');
   }
 
   return (
