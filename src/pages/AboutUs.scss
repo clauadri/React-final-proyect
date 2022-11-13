@@ -1,0 +1,19 @@
+.imageAbout{
+    
+    display: flex;
+    height: 750px;
+
+    .about{
+        width: 700px;
+        margin-top: 10px;
+        background-color: rgb(244, 242, 242);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 718px;
+        p{
+            text-align: justify;
+            width: 500px;
+        }
+    }
+}
