@@ -30,9 +30,26 @@ const Login = () => {
             name="email"
             placeholder="Introduce tu email"
             type="email"
-            {...register("email", { required: true })}
+            {...register("email", { 
+              required: "Introduce un email, por favor",
+            minLength: {
+                value: 2,
+                message: "el email tiene que ser mas largo"
+            },
+            pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i ,
+                message: "Introduce un email con formato valido"
+            }
+              
+               })}
           ></input>
         </label>
+        {errors.email ? <>
+        {errors.email.type === "required" && <p>{errors.email.message}</p>}
+        {errors.email.type === "minLength" && <p>{errors.email.message}</p>}
+        {errors.email.type === "pattern" && <p>{errors.email.message}</p>}
+      </> : null}
+
         <label>
           <p>Contraseña</p>
           <input
@@ -41,13 +58,13 @@ const Login = () => {
             type="password"
             {...register("password", {
               required: "Introduce una contraseña válida",
-              pattern: { message: "Introduce una contraseña válida" },
+              pattern:{message: "No puedes pasar"},
             })}
           ></input>
         </label>
         {errors.password ? <p>Error en la contraseña</p> : null}
         <label className="button">
-          <Boton text="Login" />
+          <Boton text="Login" disabled={!isValid} />
         </label>
       </form>
     </div>
