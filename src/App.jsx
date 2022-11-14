@@ -12,6 +12,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { checkSession } from './redux/users/user.functions';
 import RutasSegurizadas from './componentes/RutasSegurizadas';
+import CreateRopa from './pages/CreateRopa';
 function App() {
   const dispatch = useDispatch();
   const token = localStorage.getItem('token')
@@ -28,6 +29,7 @@ function App() {
           <Route path='ropa' element = {<Ropa/>}/> 
           <Route path='' element = {<Home/>}/>  
           <Route path='aboutus' element = {<AboutUs/>}/> 
+          <Route path='createropa' element = {<CreateRopa/>}/>
           <Route path='register' element ={<Register/>}/>
           <Route path='login' element = {<Login/>}/> 
         </Routes>

@@ -1,5 +1,5 @@
 import axios from "axios"
-
+import { API } from "../../services/api";
 export const getClothes = ()=>async(dispatch)=>{
     dispatch({type:'gettingClothes'})
 
@@ -11,6 +11,22 @@ export const getClothes = ()=>async(dispatch)=>{
 
     } catch (error) {
         dispatch({type:'errorClothes', payload:error.message})
+    }
+
+}
+export const createClothes = (datos, navigateTo)=>async(dispatch)=>{
+    dispatch({type:'creatingClothes'})
+
+    try {
+
+        const result =await API.post("ropas/create", datos)
+        console.log(result);
+        dispatch({type: 'createdClothes'})
+        localStorage.setItem('id',result.data._id)
+        console.log(result.data._id);
+        navigateTo('/');
+    } catch (error) {
+        dispatch({type:'errorCreating'})
     }
 
 }

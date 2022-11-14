@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux'
 import { Navigate } from 'react-router-dom'
 
 const RutasSegurizadas = (componente) => {
-    const {user, token} = useSelector(state => state.auth)
+    const {users, token} = useSelector(state => state.auth)
 
-    if(user === null) return ( <Navigate to='/login'/>);
-    if(user ) return componente
+    if(!users.rol === 'admin') return ( <Navigate to='/login'/>);
+    if(users ) return componente
 }
 
 export default RutasSegurizadas
