@@ -10,13 +10,13 @@ const Navbar = () => {
   
   return (
     <nav className='nav' >
-        <NavLink to="" activeclassname={'active'}>Home</NavLink>
-        <NavLink to="accesorios" activeclassname={'active'}>Clothes</NavLink>
-        <NavLink to="aboutus" activeclassname={'active'}>About Us</NavLink>
+        <NavLink to=""  className={"hover"}  activeclassname={'active'}>Home</NavLink>
+        <NavLink to="accesorios" className={"hover"}  activeclassname={'active'}>Clothes</NavLink>
+        <NavLink to="aboutus" className={"hover"} activeclassname={'active'}>About Us</NavLink>
         {!token && 
         <>
-        <NavLink to="register" activeclassname={'active'}>Register</NavLink>
-        <NavLink to="login" activeclassname={'active'}>Login</NavLink>
+        <NavLink to="register" className={"hover"} activeclassname={'active'}>Register</NavLink>
+        <NavLink to="login" className={"hover"}  activeclassname={'active'}>Login</NavLink>
         </>
         }
         {token && <BotonLogout/>}
