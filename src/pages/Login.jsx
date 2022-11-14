@@ -58,7 +58,7 @@ const Login = () => {
             type="password"
             {...register("password", {
               required: "Introduce una contraseña válida",
-              pattern:/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/,
+              pattern:{message: "No puedes pasar"},
             })}
           ></input>
         </label>
