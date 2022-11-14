@@ -4,6 +4,10 @@
     justify-content: center;
     gap: 20px;
     
+    .active{
+        text-decoration: underline;
+        
+    }
 
     a{
         text-decoration: none;

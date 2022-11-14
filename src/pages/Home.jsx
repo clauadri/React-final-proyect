@@ -19,10 +19,10 @@ const Home = () => {
 
     <div className="fotos">
       <div className="foto" > <img src="https://wemotoclothing.com/media/image/a8/32/6e/wemoto-aw22-shooting-men-knitwear-theo-cotton-olive-1a7jHTU2PG8Frk.jpg"  alt="foto1" ></img>
-      <div className="center" >KnitwearMen</div>
+      <div className="center" >Knitwear Men</div>
        </div>
       <div className="foto" > <img src="https://wemotoclothing.com/media/image/2f/60/8a/wemoto-aw22-shooting-women-sweatwear-bird-hood-olive-3ff0FxDYX5tcnS.jpg" alt="foto2"></img>
-      <div className="center" >Sweater women</div>
+      <div className="center" >Sweatwear Women</div>
       </div>
       
     </div>

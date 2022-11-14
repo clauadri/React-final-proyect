@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className='nav' >
         <NavLink to="" activeclassname={'active'}>Home</NavLink>
-        <NavLink to="accesorios" activeclassname={'active'}>Accesorios</NavLink>
+        <NavLink to="accesorios" activeclassname={'active'}>Clothes</NavLink>
         <NavLink to="aboutus" activeclassname={'active'}>About Us</NavLink>
         {!token && 
         <>
