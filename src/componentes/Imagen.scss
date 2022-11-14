@@ -1,19 +1,23 @@
-.imagen{
-    position: relative;
-    text-align: center;
-    color: white;
+.imagen {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+  :hover {
+    filter: opacity(0.5);
+    transition: all 0.35s ease-in-out;
+      
+  }
+  img {
     width: 100%;
-    margin: 10px;
-    :hover {filter: opacity(.5);};
-   img{
-    width:100%;
-   }
+  }
 }
-.center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 45px;
-    font-weight:bolder;
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  font-weight: bolder;
 }

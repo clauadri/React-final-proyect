@@ -17,8 +17,8 @@ const Navbar = () => {
         {users?.rol === 'admin' && <NavLink to="createropa" activeclassname={'active'}>Crear nueva ropa</NavLink>}
         {!token && 
         <>
-        <NavLink to="register" activeclassname={'active'}>Register</NavLink>
-        <NavLink to="login" activeclassname={'active'}>Login</NavLink>
+        <NavLink to="register" className={"hover"} activeclassname={'active'}>Register</NavLink>
+        <NavLink to="login" className={"hover"}  activeclassname={'active'}>Login</NavLink>
         </>
         }
         <div className='user-log'>
