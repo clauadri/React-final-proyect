@@ -1,17 +1,17 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import Boton from './Boton'
 import { BotonLogout } from './BotonLogout'
 import "./Navbar.scss"
+
 const Navbar = () => {
   
-  const {token} = useSelector(state => state.users)
+  const {token, users} = useSelector(state => state.users)
   
   return (
     <nav className='nav' >
         <NavLink to="" activeclassname={'active'}>Home</NavLink>
-        <NavLink to="accesorios" activeclassname={'active'}>Accesorios</NavLink>
+        <NavLink to="ropa" activeclassname={'active'}>Ropa</NavLink>
         <NavLink to="aboutus" activeclassname={'active'}>About Us</NavLink>
         {!token && 
         <>
@@ -20,6 +20,8 @@ const Navbar = () => {
         </>
         }
         {token && <BotonLogout/>}
+        {console.log(users)}
+        {users && <p>Usuario: {users.userName}</p>}
     </nav>
   )
 }

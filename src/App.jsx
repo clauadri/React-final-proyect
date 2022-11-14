@@ -1,7 +1,7 @@
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import './App.css';
 import Home from './pages/Home';
-import Accesorios from './pages/Accesorios';
+import Ropa from './pages/Ropa';
 import AboutUs from './pages/AboutUs';
 import Navbar from './componentes/Navbar';
 import Register from './pages/Register';
@@ -21,11 +21,11 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <div>
+      <div className='cont-app'>
       <img className='logo' src='https://wemotoclothing.com/media/image/dc/d9/12/wemoto_logo_400.png' alt=''></img>
       <Navbar/>
         <Routes> 
-          <Route path='accesorios' element = {<Accesorios/>}/> 
+          <Route path='ropa' element = {<Ropa/>}/> 
           <Route path='' element = {<Home/>}/>  
           <Route path='aboutus' element = {<AboutUs/>}/> 
           <Route path='register' element ={<Register/>}/>

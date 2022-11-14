@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getClothes } from "../redux/ropa/ropa.functions";
 import { useSelector } from "react-redux";
-import "./Accesorios.scss";
+import "./Ropa.scss";
 import Imagen from "../componentes/Imagen";
 
 const Home = () => {

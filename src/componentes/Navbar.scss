@@ -2,11 +2,15 @@
     
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     
 
     a{
         text-decoration: none;
         color: black;
+    }
+    p{
+        margin-left: 20px;
     }
 }

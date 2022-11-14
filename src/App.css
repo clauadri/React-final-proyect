@@ -1,8 +1,11 @@
+html, body {
+  min-height: 100%;
+  position: relative;
+}
+
 .App {
   text-align: center;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  
 }
 h1{
   margin:2px;
@@ -14,3 +17,9 @@ h1{
   margin-bottom: 10px;
   width:130px;
 }
+/* .cont-app{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100%;
+} */
