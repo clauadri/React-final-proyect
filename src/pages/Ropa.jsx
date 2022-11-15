@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import "./Ropa.scss";
 import Imagen from "../componentes/Imagen";
 
+
 const Home = () => {
   const dispatch = useDispatch();
 
@@ -33,6 +34,7 @@ const Home = () => {
                 <h3>{ropa.tipo}</h3>
                 <p>{ropa.precio} €</p>
                 <p>Talla: {ropa.talla}</p>
+                
               </div>
             
           );

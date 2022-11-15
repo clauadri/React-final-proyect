@@ -1,11 +1,11 @@
 import axios from "axios"
-import { API } from "../../services/api";
+import { API , API2} from "../../services/api";
 export const getClothes = ()=>async(dispatch)=>{
     dispatch({type:'gettingClothes'})
 
     try {
 
-        const result =await axios.get("https://back-proyecto-react.vercel.app/ropas")
+        const result =await API.get("/ropas")
         console.log(result);
         dispatch({type: 'getClothes', payload: result.data})
 
@@ -16,10 +16,10 @@ export const getClothes = ()=>async(dispatch)=>{
 }
 export const createClothes = (datos, navigateTo)=>async(dispatch)=>{
     dispatch({type:'creatingClothes'})
-
+    console.log('hola');
     try {
-
-        const result =await API.post("ropas/create", datos)
+        console.log(datos);
+        const result =await API2.post("/ropas/create", datos)
         console.log(result);
         dispatch({type: 'createdClothes'})
         localStorage.setItem('id',result.data._id)

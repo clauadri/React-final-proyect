@@ -17,8 +17,14 @@ const CreateRopa = () => {
   const dispatch = useDispatch();
 
   const newClothes = async(datos) =>{
-    dispatch(createClothes(datos , navigateTo))
-    console.log(datos)
+    const formData = new FormData();
+    formData.append("tipo", datos.tipo);
+    formData.append("color", datos.color);
+    formData.append("precio", datos.precio);
+    formData.append("imagen", datos.imagen[0]);
+    formData.append("talla", datos.talla);
+    dispatch(createClothes(formData , navigateTo))
+    
 }
 
   return (
@@ -38,7 +44,7 @@ const CreateRopa = () => {
         </label>
         <label>
             <p>Imagen</p>
-            <input type="text" name="imagen"{...register("imagen",{required:true})}/>
+            <input type="file" name="imagen"{...register("imagen",{required:true})}/>
         </label>
         <label>
             <p>Talla</p>
